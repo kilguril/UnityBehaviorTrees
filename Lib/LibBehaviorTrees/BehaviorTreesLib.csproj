@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{485A4D91-6E37-489C-A2CD-DB1CA14FE9B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BehaviorTreesLib</RootNamespace>
+    <AssemblyName>BehaviorTreesLib</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UFormsLib">
+      <HintPath>..\UnityLib\UFormsLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>..\UnityLib\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\UnityLib\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Assets\BehaviorTree\Actor.cs">
+      <Link>Actor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Attributes\BehaviorGeneratorAttribute.cs">
+      <Link>Attributes\BehaviorGeneratorAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Attributes\BehaviorNodeAttribute.cs">
+      <Link>Attributes\BehaviorNodeAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Attributes\BehaviorNodeParameterAttribute.cs">
+      <Link>Attributes\BehaviorNodeParameterAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\BehaviorCache.cs">
+      <Link>BehaviorCache.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Behaviors\Actions\ConsoleLog.cs">
+      <Link>Behaviors\Actions\ConsoleLog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Behaviors\Actions\Constant.cs">
+      <Link>Behaviors\Actions\Constant.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Behaviors\Actions\Delay.cs">
+      <Link>Behaviors\Actions\Delay.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Behaviors\Actions\Subtree.cs">
+      <Link>Behaviors\Actions\Subtree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Behaviors\BehaviorTree.cs">
+      <Link>Behaviors\BehaviorTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Behaviors\BehaviorTreeNode.cs">
+      <Link>Behaviors\BehaviorTreeNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Behaviors\Composite\Selector.cs">
+      <Link>Behaviors\Composite\Selector.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Behaviors\Composite\Sequencer.cs">
+      <Link>Behaviors\Composite\Sequencer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Behaviors\Decorators\Inverter.cs">
+      <Link>Behaviors\Decorators\Inverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Behaviors\Decorators\Repeater.cs">
+      <Link>Behaviors\Decorators\Repeater.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Blackboard.cs">
+      <Link>Blackboard.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Editor\BehaviorEditorSettingsControl.cs">
+      <Link>Editor\BehaviorEditorSettingsControl.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Editor\BehaviorNodeControl.cs">
+      <Link>Editor\BehaviorNodeControl.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Editor\BehaviorTreeControl.cs">
+      <Link>Editor\BehaviorTreeControl.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Editor\BehaviorTreeEditor.cs">
+      <Link>Editor\BehaviorTreeEditor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Editor\BehaviorTreeGenerator.cs">
+      <Link>Editor\BehaviorTreeGenerator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Editor\BehaviorTreeNodeIndexer.cs">
+      <Link>Editor\BehaviorTreeNodeIndexer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Editor\BehaviorTreeXMLSerializer.cs">
+      <Link>Editor\BehaviorTreeXMLSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Assets\BehaviorTree\Editor\EditorNodeTypeCache.cs">
+      <Link>Editor\EditorNodeTypeCache.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
